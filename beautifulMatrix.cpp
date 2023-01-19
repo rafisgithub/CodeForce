@@ -1,3 +1,4 @@
+/* 
 #include<iostream>
 #include<cmath>
 using namespace std;
@@ -11,5 +12,30 @@ int main(){
 			}
 		}
 	}
+	return 0;
+}
+*/
+#include<iostream>
+#include<cmath>
+using namespace std;
+int main(){
+	int matrix[6][6];
+	int i;
+	int j;
+	int minNumOfMove=0;
+	for(i=0;i<5;i++){
+		for(j=0;j<5;j++){
+			cin>>matrix[i][j];
+		}
+	}
+	for(i=0;i<5;i++){
+		for(j=0;j<5;j++){
+			if(matrix[i][j]==1){
+				minNumOfMove=abs(2-i)+abs(2-j);
+			}
+		}
+	}
+	cout<<minNumOfMove<<endl;
+	
 	return 0;
 }
